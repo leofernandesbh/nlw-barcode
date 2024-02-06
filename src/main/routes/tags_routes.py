@@ -10,4 +10,4 @@ def create_tag():
     http_request = HttpRequest(body=request.json)
     response = tag_creator_view.validate_and_create(http_request)
 
-    return jsonify(response), response.status_code
+    return jsonify(response.body), response.status_code
